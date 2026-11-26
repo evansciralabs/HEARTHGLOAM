@@ -306,6 +306,29 @@ html.fo #hgpa figure.now{transform:perspective(700px) rotateY(16deg) translateY(
 @media (orientation:portrait){html.fo .hero{translate:0 -7vh}html.fo #hgpa{right:0;width:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 3vh)}html.fo #hgpa img{width:clamp(52px,15vmin,150px);height:clamp(52px,15vmin,150px)}html.fo #hgpa figure{transform:none}html.fo #hgpa figure.now{transform:translateY(-8px) scale(1.12)}}
 .kg.hgsc .chip:has(>.hgn){white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal;word-break:normal}
 #hgpm .pj{display:block;margin:-2px 0 4px 52px;font-size:10px;line-height:1.45;color:var(--dm);letter-spacing:.04em}
+
+#hgsh,#hgcm,#hgci{position:fixed;inset:0;z-index:2600;display:flex;align-items:center;justify-content:center;background:rgba(5,3,1,.8);padding:12px}
+#hgsh .pb,#hgcm .pb,#hgci .pb{width:min(520px,100%);max-height:min(680px,100%);display:flex;flex-direction:column;gap:10px;padding:14px;border:1px solid var(--c);border-radius:8px;background:#120a04;background-image:linear-gradient(180deg,rgba(255,221,180,.08),transparent 38%)}
+#hgsh h3,#hgcm h3,#hgci h3{margin:0;font-size:11px;color:var(--c);font-weight:700}
+#hgsh .pl,#hgcm .pl,#hgci .pl{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:6px;overscroll-behavior:contain}
+#hgsh .pl p,#hgcm .pl p,#hgci .pl p{color:var(--dm);font-size:11px;line-height:1.7;text-align:center;margin:14px 6px}
+#hgsh label{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--dm);font-size:11px;margin-top:4px}
+#hgsh input,#hgsh textarea,#hgcm input{font:400 15px/1.3 Georgia,"Times New Roman",serif;color:var(--tx);background:rgba(14,8,3,.6);border:1px solid rgba(201,182,156,.4);border-radius:4px;padding:7px 8px;min-width:0;width:100%;box-sizing:border-box;-webkit-user-select:text;user-select:text}
+#hgsh textarea{min-height:72px;resize:vertical}
+#hgcm input{text-transform:uppercase}
+#hgcm .pr{display:grid;grid-template-columns:1fr 78px 38px;gap:8px;align-items:center}
+#hgci .pr{display:grid;grid-template-columns:1fr;gap:8px}
+#hgsh button,#hgcm button,#hgci button{font:inherit;color:var(--dm);background:rgba(14,8,3,.35);border:1px solid rgba(201,182,156,.45);border-radius:4px;min-height:36px;padding:6px 10px;cursor:pointer;text-transform:uppercase}
+#hgsh button.go,#hgcm button.go,#hgci button.go{color:var(--c);border-color:var(--c)}#hgsh button:disabled,#hgcm button:disabled,#hgci button:disabled{opacity:.4;cursor:default}
+#hgsh label button{min-height:28px;padding:2px 8px;font-size:10px}
+#hgsh .pf,#hgcm .pf,#hgci .pf{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+#hgpm .pc{display:flex}#hgpm .pc button{flex:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+#hgpm .pr img{cursor:pointer}
+#hgprt{display:none}
+@media print{html.prt body>*:not(#hgprt){display:none!important}html.prt,html.prt body{background:#fff!important;overflow:visible!important;height:auto!important}
+ html.prt #hgprt{display:block;color:#000;background:#fff;font:14px/1.5 Georgia,"Times New Roman",serif;padding:8mm}
+ #hgprt h1{font-size:22px;margin:0 0 4px;border-bottom:2px solid #000}#hgprt h2{font-size:12px;letter-spacing:.08em;margin:12px 0 3px}
+ #hgprt pre{font:inherit;white-space:pre-wrap;border:1px solid #444;border-radius:3px;padding:6px 8px;min-height:70px;margin:0}#hgprt small{display:block;margin-top:14px;color:#555;font-size:10px}}
 </style></head><body>
 <img class="bd" id="bd" alt=""><img id="scene" alt="" aria-hidden="true"><img class="hero" id="hero" alt="MONSTER"><div class="vg"></div><div id="fl"></div>
 <div id="hgmv" aria-hidden="true"><div class="box"><img alt=""><canvas></canvas></div></div><div id="app">
@@ -2260,7 +2283,7 @@ function hgLinkGot(u){if(u&&u.length===14&&u[0]===0x48&&u[1]===0x47&&u[2]===4){c
 /* ═ HEARTHGLOAM · PARTY ═ players' character pictures, used as they are; a lineup in VIEW, the current turn lit (from the book's
    TURNS, by name). List and SHOWN kept per device (hg_party); pictures in IndexedDB beside the F13 art ("party:<id>"). */
 var HGP={list:[],show:1,url:{},turn:"",el:null,chip:{}};
-try{const v=JSON.parse(localStorage.getItem("hg_party")||"{}")||{};if(Array.isArray(v.list))HGP.list=v.list.filter(x=>x&&x.id).slice(0,8).map(x=>({id:String(x.id),name:String(x.name||"HERO").slice(0,24),j:Array.isArray(x.j)?x.j.filter(e=>e&&e.n).slice(-40).map(e=>({k:e.k==="s"?"s":"m",n:String(e.n).slice(0,60),t:+e.t||0})):[]}));HGP.show=v.show===0?0:1}catch(_){}
+try{const v=JSON.parse(localStorage.getItem("hg_party")||"{}")||{};if(Array.isArray(v.list))HGP.list=v.list.filter(x=>x&&x.id).slice(0,8).map(x=>({id:String(x.id),name:String(x.name||"HERO").slice(0,24),sh:hgShNorm(x.sh),j:Array.isArray(x.j)?x.j.filter(e=>e&&e.n).slice(-40).map(e=>({k:e.k==="s"?"s":"m",n:String(e.n).slice(0,60),t:+e.t||0})):[]}));HGP.show=v.show===0?0:1}catch(_){}
 
 var HGE={lay:"row",sc:0};try{const v=JSON.parse(localStorage.getItem("hg_party")||"{}")||{};HGE.lay=v.lay==="face"?"face":"row"}catch(_){}
 function hgFoOn(){return HGE.lay==="face"||!!HGE.sc}
@@ -2295,16 +2318,16 @@ hgPartyIn.onchange=async()=>{const fs=[...(hgPartyIn.files||[])];hgPartyIn.value
  if(n){hgPartySave();hgPartyDraw();if(hgPartyEditPaint)hgPartyEditPaint();toast("PARTY · "+n+" ADDED · "+HGP.list.length+" IN ALL");try{hgEmit("log",{text:"PARTY · "+HGP.list.map(c=>c.name).join(", ")})}catch(_){}}};
 function hgPartyEdit(){if(document.getElementById("hgpm"))return;const m=document.createElement("div"),box=document.createElement("div"),h=document.createElement("h3"),L=document.createElement("div"),bar=document.createElement("div");
  m.id="hgpm";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-label","THE PARTY");box.className="pb";L.className="pl";bar.className="pf";
- h.textContent="THE PARTY · SHOWN IN VIEW (THE EYE) · THEIR TURN LIGHTS UP FROM THE BOOK'S TURNS";
+ h.textContent="THE PARTY · SHOWN IN VIEW (THE EYE) · THEIR TURN LIGHTS UP FROM THE BOOK'S TURNS · TAP A PICTURE FOR THEIR SHEET";
  const mk=(t,f,c)=>{const b=document.createElement("button");b.type="button";b.textContent=t;if(c)b.className=c;b.onclick=f;return b},onKey=e=>{if(e.key==="Escape"){e.preventDefault();e.stopPropagation();close()}},close=()=>{removeEventListener("keydown",onKey,true);m.remove();hgPartyEditPaint=null};addEventListener("keydown",onKey,true);
- bar.append(mk("ADD PICTURES",()=>{if(HGP.list.length>=8){toast("THE PARTY IS FULL · 8 AT MOST");return}hgPartyIn.click()},"go"),mk("NEW JOURNEY",function(){if(!this._a){this._a=1;this.textContent="TAP AGAIN: CLEAR";setTimeout(()=>{this._a=0;this.textContent="NEW JOURNEY"},2500);return}HGP.list.forEach(c=>c.j=[]);hgPartySave();hgPartyEditPaint();toast("JOURNEYS CLEARED")}),mk("DONE",close));box.append(h,L,bar);m.appendChild(box);document.body.appendChild(m);
+ bar.append(mk("ADD PICTURES",()=>{if(HGP.list.length>=8){toast("THE PARTY IS FULL · 8 AT MOST");return}hgPartyIn.click()},"go"),mk("NEW JOURNEY",function(){if(!this._a){this._a=1;this.textContent="TAP AGAIN: CLEAR";setTimeout(()=>{this._a=0;this.textContent="NEW JOURNEY"},2500);return}HGP.list.forEach(c=>c.j=[]);hgPartySave();hgPartyEditPaint();toast("JOURNEYS CLEARED")}),mk("DONE",close));box.append(h,hgCBar(),L,bar);m.appendChild(box);document.body.appendChild(m);
  m.addEventListener("click",e=>{if(e.target===m)close()});
  hgPartyEditPaint=()=>{L.textContent="";if(!HGP.list.length){const p=document.createElement("p");p.textContent="NO ONE YET · ADD EACH PLAYER'S CHARACTER PICTURE (SEVERAL AT ONCE IS FINE) · THE FILE NAME BECOMES THE NAME · USE THE SAME NAME IN THE BOOK'S TURNS AND THEIR TURN LIGHTS UP";L.appendChild(p);return}
   HGP.list.forEach((c,i)=>{const r=document.createElement("div"),im=document.createElement("img"),inp=document.createElement("input");r.className="pr";im.alt="";if(HGP.url[c.id])im.src=HGP.url[c.id];
    inp.value=c.name;inp.maxLength=24;inp.setAttribute("aria-label","NAME OF CHARACTER "+(i+1));inp.onchange=()=>{c.name=inp.value.toUpperCase().trim().slice(0,24)||c.name;inp.value=c.name;hgPartySave();hgPartyDraw()};
    const up=mk("↑",()=>{HGP.list.splice(i-1,0,HGP.list.splice(i,1)[0]);hgPartySave();hgPartyDraw();hgPartyEditPaint()});up.disabled=!i;up.setAttribute("aria-label","MOVE "+c.name+" LEFT IN THE LINEUP");
    const rm=mk("×",async()=>{HGP.list.splice(i,1);if(HGP.url[c.id])URL.revokeObjectURL(HGP.url[c.id]);delete HGP.url[c.id];await artDel("party:"+c.id);hgPartySave();hgPartyDraw();hgPartyEditPaint()});rm.setAttribute("aria-label","REMOVE "+c.name);
-   r.append(im,inp,up,rm);L.appendChild(r);const jl=hgJourneyLine(c);if(jl){const q=document.createElement("small");q.className="pj";q.textContent=jl;L.appendChild(q)}})};
+   im.title="SHEET";im.setAttribute("role","button");im.tabIndex=0;im.setAttribute("aria-label","OPEN "+c.name+" SHEET");im.onclick=()=>hgSheet(c);im.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();hgSheet(c)}};r.append(im,inp,up,rm);L.appendChild(r);const jl=hgJourneyLine(c);if(jl){const q=document.createElement("small");q.className="pj";q.textContent=jl;L.appendChild(q)}})};
  hgPartyEditPaint();setTimeout(()=>{try{bar.firstChild.focus()}catch(_){}},30)}
 hgPartyLoad();
 /* ═ HEARTHGLOAM · MAP ═ fog-of-war over a map picture. Per device: the list, the current map, ON SCREEN and each map's fog
@@ -2848,6 +2871,86 @@ function hgScoreMel(S,t,T,bd){const m=S.m,ml=S.ml;if(!m.on||t<m.until-1e-3)retur
  else{n=pick(m.last,0);const D=T>.6?[1,1,.5,.5,2]:[2,1,1,3];d=D[Math.floor(Math.random()*D.length)]}
  if(d===.5){play(n,t,bd/2);const n2=pick(n,0);play(n2,t+bd/2,bd/2);m.until=t+bd}else{play(n,t,d*bd);m.until=t+d*bd}
  m.n++}
+/* ═ HEARTHGLOAM · CAMPAIGNS AND SHEETS (F26) ═ one campaign = the party (pictures, sheets, journeys) + the stored scenes. Kept per device:
+   hg_camps (index) and hg_camp_<id> (the parked ones; the live one is in hg_party / hg_scenes). Switching reloads the page. The .srcd file is
+   SRC-D2-V1 (projects[]; one project per campaign, attachment campaign.json). Pictures travel inside it. */
+var HGC={ix:null};
+const hgShKeys=["stats","bg","inv","notes"],hgShLab={stats:"STATS",bg:"BACKGROUND",inv:"INVENTORY",notes:"NOTES"};
+function hgShNorm(x){x=x&&typeof x==="object"?x:{};const o={role:String(x.role||"").slice(0,60),p:{}};["stats","bg","inv","notes"].forEach(k=>{o[k]=String(x[k]||"").slice(0,2000);o.p[k]=x.p&&typeof x.p==="object"?!!x.p[k]:k==="notes"});return o}
+const hgEl=(t,c)=>{const e=document.createElement(t);if(c)e.className=c;return e};
+const hgBtn=(t,f,c)=>{const b=hgEl("button",c);b.type="button";b.textContent=t;b.onclick=f;return b};
+function hgCIx(){if(HGC.ix)return HGC.ix;let v=null;try{v=JSON.parse(localStorage.getItem("hg_camps")||"null")}catch(_){}
+ if(!v||!Array.isArray(v.ids)||!v.ids.length)v={cur:"c1",ids:[{id:"c1",name:"CAMPAIGN 1"}]};
+ v.ids=v.ids.filter(e=>e&&e.id).map(e=>({id:String(e.id),name:String(e.name||"CAMPAIGN").slice(0,40)}));if(!v.ids.length)v.ids=[{id:"c1",name:"CAMPAIGN 1"}];
+ v.cur=String(v.cur);if(!v.ids.some(e=>e.id===v.cur))v.cur=v.ids[0].id;HGC.ix=v;return v}
+const hgCSaveIx=()=>{try{localStorage.setItem("hg_camps",JSON.stringify(HGC.ix))}catch(_){toast("CAMPAIGNS NOT SAVED · STORAGE BLOCKED")}};
+const hgCName=()=>{const x=hgCIx();return(x.ids.find(e=>e.id===x.cur)||x.ids[0]).name};
+function hgCStore(id){hgPartySave();try{localStorage.setItem("hg_camp_"+id,JSON.stringify({party:localStorage.getItem("hg_party")||"",scenes:localStorage.getItem("hg_scenes")||""}))}catch(_){}}
+function hgCRead(id){const x=hgCIx();if(id===x.cur){hgPartySave();return{party:localStorage.getItem("hg_party")||"",scenes:localStorage.getItem("hg_scenes")||""}}
+ let d=null;try{d=JSON.parse(localStorage.getItem("hg_camp_"+id)||"null")}catch(_){}return d&&typeof d==="object"?{party:String(d.party||""),scenes:String(d.scenes||"")}:{party:"",scenes:""}}
+function hgCSwitch(id){const x=hgCIx();if(id===x.cur)return;hgCStore(x.cur);const d=hgCRead(id);
+ try{d.party?localStorage.setItem("hg_party",d.party):localStorage.removeItem("hg_party");d.scenes?localStorage.setItem("hg_scenes",d.scenes):localStorage.removeItem("hg_scenes")}catch(_){toast("COULD NOT SWITCH · STORAGE BLOCKED");return}
+ x.cur=id;hgCSaveIx();toast("CAMPAIGN · "+hgCName()+" · RELOADING · TAP POWER");setTimeout(()=>location.reload(),500)}
+function hgCNew(name){const x=hgCIx(),id="c"+Date.now().toString(36)+Math.random().toString(36).slice(2,4);if(x.ids.length>=24){toast("24 CAMPAIGNS AT MOST");return null}
+ try{localStorage.setItem("hg_camp_"+id,JSON.stringify({party:"",scenes:""}))}catch(_){toast("COULD NOT ADD · STORAGE BLOCKED");return null}
+ x.ids.push({id,name:String(name||"CAMPAIGN "+(x.ids.length+1)).toUpperCase().slice(0,40)});hgCSaveIx();return id}
+async function hgCDel(id){const x=hgCIx();if(id===x.cur||x.ids.length<2)return;const d=hgCRead(id);let pr={};try{pr=JSON.parse(d.party||"{}")||{}}catch(_){}
+ const keep=new Set();for(const e of x.ids)if(e.id!==id){let q={};try{q=JSON.parse(hgCRead(e.id).party||"{}")||{}}catch(_){}(q.list||[]).forEach(c=>keep.add(c&&c.id))}
+ for(const c of(pr.list||[]))if(c&&c.id&&!keep.has(c.id))await artDel("party:"+c.id);
+ try{localStorage.removeItem("hg_camp_"+id)}catch(_){}x.ids=x.ids.filter(e=>e.id!==id);hgCSaveIx()}
+const hgDataUrl=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(String(f.result||""));f.onerror=()=>r("");f.readAsDataURL(b)});
+function hgDu(u){const m=/^data:(image\/(?:png|jpeg|webp|gif));base64,([A-Za-z0-9+\/=]+)$/.exec(String(u||""));if(!m)return null;try{const s=atob(m[2]),a=new Uint8Array(s.length);for(let i=0;i<s.length;i++)a[i]=s.charCodeAt(i);return new Blob([a],{type:m[1]})}catch(_){return null}}
+async function hgCData(id){const x=hgCIx(),d=hgCRead(id);let pr={},sc=[];try{pr=JSON.parse(d.party||"{}")||{}}catch(_){}try{sc=JSON.parse(d.scenes||"[]")}catch(_){}
+ const pics={};for(const c of(pr.list||[])){const r=await artGet("party:"+c.id);if(r&&r.img){const u=await hgDataUrl(r.img);if(u)pics[c.id]=u}}
+ return{type:"hearthgloam-campaign",v:1,name:(x.ids.find(e=>e.id===id)||{}).name||"CAMPAIGN",party:pr,scenes:sc,pics}}
+const hgRid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+async function hgCExportText(){const x=hgCIx(),now=new Date().toISOString(),ps=[];
+ for(const e of x.ids){const d=await hgCData(e.id),n=((d.party&&d.party.list)||[]).length;
+  ps.push({id:hgRid(),title:"HG · "+e.name,status:"Active",dueDate:"",notes:"HEARTHGLOAM campaign · "+n+" character"+(n===1?"":"s"),
+   attachments:[{content:JSON.stringify(d),filename:"campaign.json",label:"campaign.json",mimeType:"application/json",timestamp:now}],createdAt:now})}
+ return JSON.stringify({projects:ps,incidents:[],scratchpad:{main:"",code:"",vip:""},appId:"SRC-D2-V1",exportTimestamp:now},null,2)}
+async function hgCExport(){try{const t=await hgCExportText(),z=n=>String(n).padStart(2,"0"),d=new Date();
+  const fn="HEARTHGLOAM_CAMPAIGNS_"+d.getFullYear()+"-"+z(d.getMonth()+1)+"-"+z(d.getDate())+"_"+z(d.getHours())+"-"+z(d.getMinutes())+"-"+z(d.getSeconds())+".srcd";
+  const u=URL.createObjectURL(new Blob([t],{type:"application/json"})),a=hgEl("a");a.href=u;a.download=fn;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(u)},4000);
+  toast("SAVED · "+fn)}catch(_){toast("COULD NOT SAVE THE FILE")}}
+function hgCParse(txt){let j;try{j=JSON.parse(txt)}catch(_){return null}if(!j||typeof j!=="object")return null;const out=[];
+ const P=Array.isArray(j.projects)?j.projects:(j.type==="hearthgloam-campaign"?[{title:j.name,attachments:[{filename:"campaign.json",content:JSON.stringify(j)}]}]:[]);
+ for(const p of P){const a=((p&&p.attachments)||[]).find(a=>a&&a.filename==="campaign.json"&&typeof a.content==="string");if(!a)continue;let d;try{d=JSON.parse(a.content)}catch(_){continue}
+  if(!d||d.type!=="hearthgloam-campaign"||!d.party||typeof d.party!=="object")continue;out.push({name:String(d.name||p.title||"CAMPAIGN").replace(/^HG · /,"").toUpperCase().slice(0,40),n:Array.isArray(d.party.list)?Math.min(8,d.party.list.length):0,d})}
+ return out}
+async function hgCImport(e){const d=e.d,x0=hgCIx();let nm=e.name,k=2;while(x0.ids.some(q=>q.name===nm))nm=e.name.slice(0,34)+" ("+(k++)+")";const id=hgCNew(nm);if(!id)return false;const pics=d.pics&&typeof d.pics==="object"?d.pics:{},list=[];
+ for(const c of(Array.isArray(d.party.list)?d.party.list:[]).slice(0,8)){if(!c||!c.id)continue;const nid=hgRid(),b=hgDu(pics[c.id]);if(b)await artPut("party:"+nid,{img:b});list.push({id:nid,name:String(c.name||"HERO").slice(0,24),sh:c.sh,j:c.j})}
+ const pr={list,show:d.party.show===0?0:1,lay:d.party.lay==="face"?"face":"row"};
+ try{localStorage.setItem("hg_camp_"+id,JSON.stringify({party:JSON.stringify(pr),scenes:JSON.stringify(Array.isArray(d.scenes)?d.scenes:[])}))}catch(_){toast("COULD NOT ADD · STORAGE BLOCKED");return false}
+ return true}
+function hgModal(id,title,lab){if(document.getElementById(id))return null;const m=hgEl("div"),box=hgEl("div","pb"),h=hgEl("h3"),L=hgEl("div","pl"),bar=hgEl("div","pf");m.id=id;m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-label",lab);h.textContent=title;
+ const close=()=>{removeEventListener("keydown",onKey,true);m.remove()},onKey=e=>{if(e.key==="Escape"){e.preventDefault();e.stopPropagation();close()}};addEventListener("keydown",onKey,true);
+ box.append(h,L,bar);m.appendChild(box);document.body.appendChild(m);m.addEventListener("click",e=>{if(e.target===m)close()});return{m,L,bar,close,h}}
+function hgCPick(){const M=hgModal("hgcm","CAMPAIGNS · EACH KEEPS ITS OWN PARTY, SHEETS, JOURNEYS AND SCENES","CAMPAIGNS");if(!M)return;const{L,bar,close}=M;
+ const paint=()=>{L.textContent="";const x=hgCIx();x.ids.forEach(e=>{const r=hgEl("div","pr"),inp=hgEl("input"),cur=e.id===x.cur;inp.value=e.name;inp.maxLength=40;inp.setAttribute("aria-label","CAMPAIGN NAME");
+   inp.onchange=()=>{e.name=inp.value.toUpperCase().trim().slice(0,40)||e.name;inp.value=e.name;hgCSaveIx()};
+   const go=hgBtn(cur?"ACTIVE":"OPEN",()=>hgCSwitch(e.id),cur?"":"go");go.disabled=cur;
+   const rm=hgBtn("×",function(){if(!this._a){this._a=1;this.textContent="?";setTimeout(()=>{this._a=0;this.textContent="×"},2500);return}hgCDel(e.id).then(paint)});rm.disabled=cur||x.ids.length<2;rm.setAttribute("aria-label","DELETE "+e.name+" (TAP TWICE)");
+   r.append(inp,go,rm);L.appendChild(r)})};
+ const inF=hgEl("input");inF.type="file";inF.accept=".srcd,.json,application/json";inF.hidden=true;M.m.appendChild(inF);
+ inF.onchange=async()=>{const f=inF.files&&inF.files[0];inF.value="";if(!f)return;let t="";try{t=await f.text()}catch(_){}const es=hgCParse(t);if(!es||!es.length){toast("NO HEARTHGLOAM CAMPAIGN IN THAT FILE");return}hgCFilePick(es,paint)};
+ bar.append(hgBtn("NEW",()=>{if(hgCNew())paint()}),hgBtn("SAVE FILE",hgCExport),hgBtn("LOAD FILE",()=>inF.click()),hgBtn("DONE",close,"go"));paint()}
+function hgCFilePick(es,done){const M=hgModal("hgci","LOAD · PICK A CAMPAIGN FROM THE FILE · IT IS ADDED, NOTHING IS REPLACED","LOAD A CAMPAIGN");if(!M)return;const{L,bar,close}=M;
+ es.forEach(e=>{L.appendChild(hgBtn(e.name+" · "+e.n+" CHARACTER"+(e.n===1?"":"S"),async function(){this.disabled=true;if(await hgCImport(e)){toast("ADDED · "+e.name+" · OPEN IT FROM THE LIST");this.textContent="ADDED · "+e.name}else this.disabled=false;done&&done()},"go"))});
+ bar.append(hgBtn("ADD ALL",async()=>{let n=0;for(const e of es)if(await hgCImport(e))n++;toast("ADDED · "+n+" CAMPAIGN"+(n===1?"":"S"));done&&done();close()}),hgBtn("DONE",close,"go"))}
+function hgCBar(){const d=hgEl("div","pc");const b=hgBtn("CAMPAIGN: "+hgCName()+" ▾",hgCPick,"go");b.setAttribute("aria-label","CAMPAIGNS: SWITCH, NAME, SAVE OR LOAD A FILE");d.appendChild(b);return d}
+function hgSheet(c){const M=hgModal("hgsh",c.name+" · SHEET · DM ONLY FIELDS NEVER PRINT ON THE PLAYER'S COPY","CHARACTER SHEET");if(!M)return;const{L,bar,close}=M;c.sh=hgShNorm(c.sh);const sh=c.sh,sv=()=>hgPartySave();
+ const ro=hgEl("input");ro.value=sh.role;ro.maxLength=60;ro.placeholder="ROLE · CLASS · LEVEL";ro.setAttribute("aria-label","ROLE");ro.oninput=()=>{sh.role=ro.value;sv()};L.appendChild(ro);
+ hgShKeys.forEach(k=>{const lb=hgEl("label"),t=hgEl("span"),ta=hgEl("textarea"),tg=hgBtn("",()=>{sh.p[k]=!sh.p[k];sv();up()});t.textContent=hgShLab[k];
+  const up=()=>{tg.textContent=sh.p[k]?"DM ONLY":"SHARED";tg.classList.toggle("go",!!sh.p[k]);tg.setAttribute("aria-label",hgShLab[k]+(sh.p[k]?": DM ONLY. TAP TO SHARE":": SHARED. TAP FOR DM ONLY"))};up();
+  ta.value=sh[k];ta.maxLength=2000;ta.setAttribute("aria-label",hgShLab[k]);ta.oninput=()=>{sh[k]=ta.value;sv()};lb.append(t,tg);L.append(lb,ta)});
+ bar.append(hgBtn("PRINT PLAYER COPY",()=>hgPrint(c,0)),hgBtn("PRINT DM COPY",()=>hgPrint(c,1)),hgBtn("DONE",()=>{sv();close()},"go"))}
+function hgPrint(c,dm){const sh=hgShNorm(c.sh);let p=document.getElementById("hgprt");if(p)p.remove();p=hgEl("div");p.id="hgprt";const h=hgEl("h1");h.textContent=c.name+(sh.role?" · "+sh.role:"");p.appendChild(h);
+ hgShKeys.forEach(k=>{if(sh.p[k]&&!dm)return;const t=hgEl("h2"),b=hgEl("pre");t.textContent=hgShLab[k]+(sh.p[k]?" (DM ONLY)":"");b.textContent=sh[k]||"\n\n\n\n\n";p.append(t,b)});
+ const f=hgEl("small");f.textContent="HEARTHGLOAM · "+hgCName();p.appendChild(f);document.body.appendChild(p);document.documentElement.classList.add("prt");
+ const done=()=>{document.documentElement.classList.remove("prt");const q=document.getElementById("hgprt");if(q)q.remove();removeEventListener("afterprint",done)};addEventListener("afterprint",done);
+ setTimeout(()=>{try{window.print()}catch(_){done()}},80)}
+hgCIx();
 /* ═ THE WORLD TAB ═ left: the beds; right: the air (LEVEL, DISTANCE, INTENSITY), the clock, and the table (TALK depth) */
 {const[wl,wr]=cols.WORLD;let g=pn($("#dd"),"WEATHER");PW.WEATHER[0].hidden=true;PW.WEATHER[0].classList.add("wx");BEDS.forEach(([lab,k])=>{W.chip[k]=chip(g,lab,0,()=>wSet(k,!W.on[k]))});W.chip.score=chip(g,"SCORE",0,()=>wSet("score",!W.on.score));W.chip.score.style.flex="1 1 100%";W.chip.score.setAttribute("aria-label","SCORE: STRINGS THAT COMPOSE AS YOU PLAY. INTENSITY AND THE DOOM CLOCK DRIVE THEM");
  g=pn(wl,"SCENES");g.classList.add("g2","hgsc");HGS.lc=chip(g,"LAIR OFF",0,()=>hgLairSet(!HGS.lair));HGS.lc.setAttribute("aria-label","LAIR: EACH MONSTER BRINGS ITS OWN WORLD");HGS.st=chip(g,"STORE",0,()=>{HGS.arm=!HGS.arm;hgSceneUI();if(HGS.arm)toast("PICK A SCENE TO KEEP THIS TABLE IN")});HGS.st.setAttribute("aria-label","STORE THE WHOLE TABLE IN A SCENE");for(let i=0;i<6;i++)HGS.ch.push(chip(g,"SCENE "+(i+1),0,()=>HGS.arm?hgSceneStore(i):hgSceneGo(i)));hgSceneUI();
