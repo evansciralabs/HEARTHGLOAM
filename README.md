@@ -6,6 +6,8 @@ A sound instrument for tabletop role-playing games. One file, no install, no int
 1. Download `index.html` and open it in a browser (works on phones). Or open the hosted page if one is listed here.
 2. Tap to start, then play. A guide is built in.
 
+Full guide: [USER-GUIDE.md](USER-GUIDE.md)
+
 Free at home, at clubs, and at charity events. Please credit it and tag it. Using it at an event where money is earned needs an annual event licence. Art creators can sell their own art packs freely. Full terms in [LICENSE.txt](LICENSE.txt).
 
 ## Add your own pictures
