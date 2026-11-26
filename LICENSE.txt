@@ -1,0 +1,47 @@
+HEARTHGLOAM · LICENSE AND TERMS OF USE
+Version 1 (DRAFT, not yet reviewed by a lawyer)
+Copyright (c) [YEAR] [OWNER LEGAL NAME]. All rights reserved except as granted below.
+
+IN SHORT
+Use it free at home, with friends, at a club, and at charity events. Please credit it and tag it. If you use it to earn money at an event, get an event licence (a modest annual fee). Art creators can sell their own art packs freely. Please do not sell HEARTHGLOAM itself.
+
+1. WHAT THIS COVERS
+"HEARTHGLOAM" means the software file(s) you downloaded (the page, its built-in book, and anything else released with this licence). It makes all of its sound itself; it contains no recorded samples. It makes no network connections; the pictures, names and notes you add stay on your device.
+
+2. FREE USES
+You may use HEARTHGLOAM at no charge for:
+a) home and personal use, including your own tabletop games, practice, teaching and learning;
+b) games, clubs, classes and meetups where nobody is charged for HEARTHGLOAM or for entry because of it, and nobody is paid to run the table;
+c) charity events (section 3).
+
+3. CHARITY AND DONATION EVENTS (free, no permission needed)
+A "charity event" is one where everything taken in beyond reasonable costs goes to a charity or good cause. You do not need to ask me first.
+We ask, but do not require, that you (a) say you used HEARTHGLOAM and tag it in your event posts, and (b) keep a flyer or a few photos of the event. Those are enough to show it was a charity event if anyone ever asks. Please get people's consent before posting photos of them.
+
+4. EVENT LICENCE (commercial events)
+You need an event licence from me before you use HEARTHGLOAM at a "commercial event": one where money is earned using it, for example paid tickets or entry, a paid game master or host, a venue or convention that charges for the session, or a paid, sponsored or ad-supported broadcast.
+The licence is annual. The fee is set by me and published at [FEE PAGE OR CONTACT]. A licence covers the events of the licensee for that year; it does not give anyone the right to resell HEARTHGLOAM.
+I may also be available to run or support an event. That is a separate agreement under its own contract and rate. An event licence never obliges either of us to it.
+
+5. ART PACKS AND OTHER ADD-ONS
+If you create pictures, scenes, character art, name lists or other content that works with HEARTHGLOAM, it is your work. You may give it away or sell it, and you owe me nothing. Your pack must not contain or copy HEARTHGLOAM's code, and you may not present it as made or approved by me. You are responsible for having the right to everything in your pack, including art made with any tool.
+
+6. WHAT YOU MAY NOT DO
+a) sell, rent, or charge for access to HEARTHGLOAM or a modified copy of it (other than the event licence above);
+b) remove the credit and notices in it, or claim it as your own work;
+c) use my name or HEARTHGLOAM's to suggest I endorse you or your product.
+You may share the unmodified file freely, with this licence kept with it. You may modify it for your own use; you may not distribute modified copies.
+
+7. YOUR CONTENT
+Your pictures, character names, notes and anything else you add are yours. They are kept on your device; I do not receive them.
+
+8. NO WARRANTY; SOUND AND HEARING
+HEARTHGLOAM is provided as it is, without any promise that it works on your device or suits your purpose, and to the extent the law allows I am not liable for loss or damage from using it. It can make loud and sudden sounds. Set the volume sensibly, test your speakers first, and do not rely on it as a hearing-safety device.
+
+9. CHANGES
+I may release future versions under different terms. The version you have stays under these terms. If you use HEARTHGLOAM in breach of these terms (for example commercially without a licence), your permission to use it ends, and it can be restored by getting the licence you need.
+
+10. LAW
+These terms are governed by the law of [JURISDICTION].
+
+CONTACT: [CONTACT EMAIL OR PAGE]

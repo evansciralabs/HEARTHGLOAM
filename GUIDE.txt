@@ -1,0 +1,98 @@
+HEARTHGLOAM · GUIDE FOR GAME MASTERS
+
+THE IDEA
+One page runs the table: the monster on screen, its sound, the weather of the place, your notes and dice, the party, the map, and the breaks. The monster fills the middle of the screen and stays clear; everything you touch sits in the side columns, one tab at a time. The sound keeps playing whatever you open, including the book. Nothing connects to the internet, ever.
+
+THE TOP OF THE SCREEN
+Top row: PLAY, TONE, FX, OUT, then the compass (WORLD: scenes, lair, clock, table, party, map, link) and the book. Power is top left; the eye (VIEW and SYSTEM) and the globe (NET KILL) top right.
+Under it: HOLD, FREEZE, PULSE, WORLD, PANIC. WORLD is the weather: tap it to bring the weather in or out; hold it for the eight beds and their LEVEL, DISTANCE and INTENSITY. Below, "the compass" means the compass tab.
+
+THE SHAPE OF A NIGHT
+Prepare once (below). On the night: power, open the book, start the breaks, turn VIEW on the projector. Play. The breaks come on their own; the table comes back on its own. At the end: FADE, and BACKUP the book.
+
+
+PART ONE · PREPARE (once per campaign, then a few minutes per session)
+
+1. THE LOOK
+Double-tap the eye (top right) for SYSTEM. LOOK picks the colour of the whole table, the book and the break pond with it: EMBER, MOSS, FROST, VIOLET or BONE.
+
+2. YOUR PICTURES
+Monster art: the compass, TABLE: ART: PORTRAIT and ART: LANDSCAPE put your own picture in place of the monster on screen (the wide one is for landscape screens). ART: RESET brings the bundled picture back.
+The party: the compass, PARTY: tap PARTY: 0, then ADD PICTURES and choose your players' character pictures (several at once is fine). The file name becomes the name ("Thorin_Ironfist.png" becomes THORIN IRONFIST); rename, move or remove them there. In VIEW they stand along the bottom; the one whose turn it is in the book's TURNS lifts and glows. Use the same names in both.
+Encounters: hold PARTY (shift-click on a computer). The scene on screen stays, a random monster steps into it with its voice, and in VIEW the party gathers on the left facing it. Hold again for another monster in the same scene. Flicking monsters keeps the scene too. Recall a stored SCENE, or hold SHOWN IN VIEW, to end it. Hold SHOWN IN VIEW at any time to switch between the lineup along the bottom and FACE-OFF VIEW.
+Journeys: every encounter and every stored scene recalled is written in each character's journey (the last 40) and in the book's table log. Open PARTY to read them under each name; NEW JOURNEY (tap twice) clears them for a new campaign.
+Maps: the compass, MAP: MAP: LOAD a map picture (up to 8). Everything starts hidden.
+All pictures stay on this device and are never changed.
+Your pictures, your sounds: the compass, TABLE, ART: PORTRAIT. Pick one picture, or several at once: they go on this monster and the next ones in order, and each picture chooses its own sound from its colours (fire reds, sea blues, frost whites, forest greens, violets, ashes and shadows pick a kind of creature; from that come its voice, its preset and its weather). Flick through them to hear each one. Change whatever you like (dials, chords, PREV and NEXT presets); it is kept with that picture when you flick on. Hold ART: PORTRAIT for a fresh draw for the same picture. ART: RESET goes back to the monster's card and its stock sound. The stock presets are always there as a backup: PREV and NEXT (OUT, MONSTER).
+
+3. YOUR SCENES
+Find each monster you will need: flick the monster sideways, use RANDOM (OUT, MONSTER), or SUMMON it from the book. A flick or RANDOM brings the monster with its own sound; SUMMON changes only the picture and leaves the music playing.
+Shape the sound if you like (PLAY and TONE). Set the weather of the place: hold WORLD (top row) and pick from RAIN, WIND, FIRE, SEA, RIVER, DRIPS, NIGHT, STORM. A tap on WORLD later takes it out and brings it back. SCORE (the wide chip under the weather) adds music: strings that compose as you play, in a key set by the monster's kind. INTENSITY (same menu) moves them from still chords to a driving pulse, and the DOOM CLOCK turns them stranger as it fills. They hush during breaks, and LEVEL and DISTANCE work on them like the weather.
+The compass, SCENES: tap STORE, then a scene (1 to 6). A scene keeps the monster, the sound, the weather, the air and the clock size. Store one for each place or fight you expect.
+LAIR ON (the compass, SCENES): every monster brings its own weather when it appears.
+
+4. THE BOOK
+Tap the book (top row). It opens full screen over the instrument; × closes it, and the sound keeps playing. Inside: campaigns with sessions, NPCs, places, quests, monsters, items and lore; files and pictures; a scratchpad; dice; and a table log that follows the game. A monster entry can SUMMON its monster and SET THE SOUND. The ≡ button holds the tools: NOTES, DICE, TURNS (initiative, with a PARTY key), NAMES/LOOT, TIMER, TABLE LOG. The ♪ button fires hits, HOLD, PANIC, scenes, LAIR and LINK without leaving the book.
+
+5. ONE DEVICE OR TWO
+One device: it plays the sound and goes on the projector. Nothing else to set up.
+Two devices (your phone in hand, a tablet or laptop on the projector): load the same pictures on both, the usual way (pictures don't travel). Then LINK carries everything else across by camera; see PART THREE.
+
+
+PART TWO · THE NIGHT
+
+START
+1. Tap power (top left).
+2. Open the book once (the book glyph, then ×), so the table log follows the night from the start.
+3. Double-tap the eye: SYSTEM, BREAKS, START. Rounds are 25 minutes unless you change them (WORK, REST, LONG; THEN GO ON or THEN WAIT).
+4. Tap the eye once: VIEW. Every control hides; only the picture, the party and the map remain. Tap the eye again to get the controls back.
+
+PLAYING
+Talk over the music: hold the monster (about a quarter second). The music dips while you hold. Double-tap to lock it down; tap again to bring the music back. On a keyboard, hold the ` key. WORLD, TABLE, TALK sets how far it dips (6, 12 or 18 dB).
+Change monster: flick it left (next) or right (previous). A slow hold is always TALK, never a change.
+Move to a prepared place: tap its scene in the compass, SCENES (or from the book's ♪). Notes you are holding with HOLD keep playing into the new sound.
+Hits for moments: DANGER, STRIKE, DOOM, RISING, SCREAM, ROAR along the bottom. A natural 20 or a natural 1 in the book's dice plays one too.
+Mood: PLAY, MACROS (DREAD, RAGE, GHOST, SWELL, SUSPENSE, SING).
+Chords: PLAY, VOICING. A chip with a small corner mark has a second chord: hold it (or shift-click) to switch. SOLO; DRONE or OPEN; MINOR or MODAL; DIM7 or CLUSTER; MAJOR or SUS.
+Top row: HOLD keeps notes ringing after you let go; FREEZE catches the sound and keeps it ringing; PULSE turns held chords into a rhythm; PANIC stops everything at once (Escape on a keyboard). Hold FREEZE or PULSE for their settings.
+DOOM CLOCK (the compass, CLOCK): 4, 6 or 8 segments. Each ADVANCE tightens the music and the weather and lights a segment around the radar. The last one strikes DOOM. RESET puts the mood back.
+Initiative: the book's TURNS. NEXT moves the turn; the party in VIEW follows.
+The map: FOG opens it. Tap or drag to reveal; start on shown ground to hide again. BRUSH 3 paints wider; REVEAL ALL and HIDE ALL do what they say. The fog is solid in the editor too, so if your own screen is the projector, nobody sees what's hidden: hold PEEK to look underneath. If your screen is not the projector, turn on SEE THROUGH. ON SCREEN puts the map up in VIEW in place of the monster; OFF SCREEN brings the monster back.
+LANTERN (OUT, BOUNCE, HUNT): lay the phone flat on the table and turn it to search for the monster; face down to hide. The sound moves around the table as you turn. Needs a phone with motion sensors.
+
+BREAKS
+The thin ring round the eye fills as a round runs. A minute before the end you get a quiet warning, so you can land the scene. Then the break fills every screen, the projector too: still water, a countdown, a few lines. Anyone can touch the water to play it. Auraliths: lines of light draw themselves across the water, ringing the pond's bells at their corners. Trace one with a finger to keep it bright; trace the whole of it and it blooms and rises. Left alone, it drifts, fades, and a new one draws. Nothing to press, nothing to win. Bells fall when a break starts and rise when the table comes back. Every fourth break is a long one. THEN WAIT holds the next round until you press START ROUND. BREAK NOW, END BREAK, PAUSE and STOP are in SYSTEM.
+
+THE ROOM (optional)
+SYSTEM, ROOM, METER ON uses the microphone to estimate how loud the room is, and keeps the night's dose against the NIOSH (85 dBA) and OSHA (90 dBA) eight-hour limits. It warns after a loud minute and at half and full dose, and writes it in the book's log. A phone's mic is not a sound level meter: set the OFFSET with − and + until NOW matches a real meter once. Nothing is recorded. On iPhone, check that the speaker volume is unchanged once the mic is on.
+
+ENDING
+FADE (OUT) ends the scene gently; hold it to change the length. REC (OUT) records the instrument, not the weather. In the book, BACKUP saves everything to a file; OPEN FILE brings a backup back. BREAKS, STOP.
+
+
+PART THREE · TWO DEVICES (LINK)
+LINK carries your choices from the device in your hand to the projector device, by camera: no internet, no Bluetooth, no pairing.
+On the projector device: the compass, LINK, WATCH. TAKES: PICTURE (the default) changes only what's on screen, right when your own device plays the sound. TAKES: PICTURE + SOUND also brings the sound, the weather, the clock and POLISH, right when the projector device is on the speakers. CAMERA: FRONT or BACK, whichever faces you.
+On your device, one SEND per change:
+· The table: the compass, LINK, SEND (or LINK in the book's ♪). An untouched stock sound sends a small QUICK CODE that reads from further away; a tweaked sound sends the FULL PATCH, so hold it closer.
+· The map: FOG, SEND sends what's revealed and whether it's on screen (the projector device needs the same map picture).
+· The breaks: SYSTEM, BREAKS, SEND TO SCENE. The projector device then breaks in step with you, and its pond comes up on its own.
+Turn your screen brightness up and hold the code toward the projector device's camera until it says LINKED; tap to close.
+
+
+PART FOUR · SETTINGS (SYSTEM: double-tap or hold the eye; or OUT, SYSTEM)
+BATTERY SAVER: stops the animation, the blurred backdrop and the hearth glow, and slows the radar and LINK. The sound never changes. Three taps on the eye switch it. AUTO turns it on at 20% battery on Android Chrome; iPhone and iPad don't report battery, so use ON there.
+NET KILL: the globe beside the eye, on by default. Hearthgloam never connects to anything and the browser enforces that; NET KILL makes it visible and RUN CHECK proves it. It can't switch your device's radio off: use airplane mode for that.
+POLISH (the compass, TABLE): smooths harsh or muddy sound on small speakers: SHROUD GLUE (gentlest), NIGHT WATCH, MUD CRYPT, EXORCISM. Adds about 43 ms of delay; switches itself off if the device drops audio. It also makes the output a few dB quieter: turn the speakers up a little.
+ACCESS (OUT): BIG TEXT and CALM FX.
+MIDI (OUT, MIDI): Hearthgloam learns controls from a MIDI controller. Any chip can be learned, including scenes, weather, LAIR and ADVANCE, so a pad controller can run the table.
+
+
+IF SOMETHING GOES WRONG
+No sound: tap power; check the device is not muted; on iPhone, the ring/silent switch can mute web audio.
+Crackles: turn POLISH off and use fewer weather beds; close other apps; turn BATTERY SAVER on.
+The book doesn't open: reload the page (it is built into hearthgloam.html).
+LINK says CAMERA BLOCKED: allow the camera for this page in the browser's settings. It says THE CAMERA NEEDS HTTPS: host the folder on an https:// address.
+LINK doesn't read: brighter screen, hold it closer and steadier, keep glare off it; QUICK CODES and the break clock read from further away.
+A map says it's not on this device: load the same picture on the projector device under MAP.
+The break came at a bad moment: SYSTEM, PAUSE; or END BREAK, which starts the next round.
